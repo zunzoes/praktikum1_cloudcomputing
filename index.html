@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Test Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0078D4, #00B4FF);
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: #0078D4;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 Azure Web Test</h1>
+        <p>Website ini berhasil berjalan di Microsoft Azure!</p>
+        <p id="time"></p>
+        <button class="btn" onclick="showMessage()">Klik Saya</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Halo! Website kamu sudah berhasil berjalan di Azure 🎉");
+        }
+
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("time").innerText = "Waktu sekarang: " + now.toLocaleString();
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
